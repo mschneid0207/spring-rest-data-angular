@@ -14,7 +14,6 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguratio
 @EnableJpaRepositories
 @Import(RepositoryRestMvcConfiguration.class)
 @EnableAutoConfiguration
-@EntityScan(basePackageClasses=de.mschneid.entity.Task.class)
 public class Application {
 
 	public static void main(String[] args) {
