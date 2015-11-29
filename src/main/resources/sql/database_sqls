@@ -1,0 +1,16 @@
+-- table creation
+CREATE table task (
+    id bigserial primary key,
+    task_name varchar(100) NOT NULL,
+    task_description text,
+    task_priority varchar(20),
+    task_status varchar(20),
+    task_start_time timestamp not null default CURRENT_TIMESTAMP,
+    task_end_time timestamp not null default CURRENT_TIMESTAMP,
+    task_archived bool default false
+);
+
+-- insert data
+insert into task values(1, 'Gathering Requirement','Requirement Gathering','MEDIUM','ACTIVE',current_timestamp, current_timestamp + INTERVAL '3 HOUR',false);
+
+
